@@ -1,0 +1,20 @@
+{
+  "clientes": [
+    {
+      "nombre": "pablo",
+      "empresa": "nttdata",
+      "telefono": "",
+      "email": "karlapavezp@gmail.com",
+      "notas": "assdad",
+      "id": 1
+    },
+    {
+      "nombre": "pablo",
+      "empresa": "nttdata",
+      "telefono": "",
+      "email": "karlapavezp@gmail.com",
+      "notas": "assdad",
+      "id": 2
+    }
+  ]
+}
