@@ -1,9 +1,12 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
+import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import Alerta from "./Alerta";
 
 const Formulario = () => {
+  const navigate = useNavigate();
+
   //Yup para validación de datos
   const nuevoClienteSchema = Yup.object().shape({
     nombre: Yup.string()
@@ -31,7 +34,8 @@ const Formulario = () => {
         },
       });
       const resultado = await respuesta.json();
-      console.log(resultado);
+      navigate("/clientes");
+      //console.log(resultado);
     } catch (error) {
       console.log(error);
     }
@@ -50,8 +54,9 @@ const Formulario = () => {
           email: "",
           notas: "",
         }}
-        onSubmit={(values) => {
-          handleSubmit(values);
+        onSubmit={async (values, { resetForm }) => {
+          await handleSubmit(values);
+          resetForm();
         }}
         //Decirle a Yup donde buscar los parámetros de validación
         validationSchema={nuevoClienteSchema}
