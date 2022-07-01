@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+import Spinner from "../components/Spinner";
+
 const VerCliente = () => {
   const { id } = useParams();
 
   const [cliente, setCliente] = useState({});
+  const [cargando, setCargando] = useState(true);
 
   useEffect(() => {
+    setCargando(!cargando);
     const obtenerClienteAPI = async () => {
       try {
         const url = `http://localhost:4000/clientes/${id}`;
@@ -16,13 +20,20 @@ const VerCliente = () => {
       } catch (error) {
         console.log(error);
       }
+      setTimeout(() => {
+        setCargando(false);
+      }, 500);
     };
     obtenerClienteAPI();
   }, []);
 
   const { nombre, empresa, telefono, email, notas } = cliente;
 
-  return (
+  return cargando ? (
+    <Spinner />
+  ) : Object.keys(cliente).length === 0 ? (
+    <p>No hay Resultados</p>
+  ) : (
     <div>
       <h1 className="font-black text-4xl text-blue-900">
         Ver Clientes: {nombre}

@@ -1,52 +1,12 @@
 {
   "clientes": [
     {
-      "nombre": "pablo",
+      "nombre": "pablo Editado",
       "empresa": "nttdata",
       "telefono": "",
-      "email": "karlapavezp@gmail.com",
-      "notas": "assdad",
+      "email": "pcorreac@nttdata.com",
+      "notas": "editado",
       "id": 1
-    },
-    {
-      "nombre": "pablo",
-      "empresa": "nttdata",
-      "telefono": "",
-      "email": "karlapavezp@gmail.com",
-      "notas": "assdad",
-      "id": 2
-    },
-    {
-      "nombre": "pablo",
-      "empresa": "nttdata",
-      "telefono": "",
-      "email": "pablocorrea523@gmail.com",
-      "notas": "",
-      "id": 3
-    },
-    {
-      "nombre": "pablo",
-      "empresa": "nttdata",
-      "telefono": "",
-      "email": "pablocorrea523@gmail.com",
-      "notas": "",
-      "id": 4
-    },
-    {
-      "nombre": "pablo",
-      "empresa": "nttdata",
-      "telefono": "",
-      "email": "pablocorrea523@gmail.com",
-      "notas": "",
-      "id": 5
-    },
-    {
-      "nombre": "pablo",
-      "empresa": "nttdata",
-      "telefono": "",
-      "email": "pablocorrea523@gmail.com",
-      "notas": "",
-      "id": 6
     },
     {
       "nombre": "netflix",
@@ -55,6 +15,14 @@
       "email": "pablocorrea523@gmail.com",
       "notas": "",
       "id": 7
+    },
+    {
+      "nombre": "Karlota",
+      "empresa": "Mi casa",
+      "telefono": "11111111",
+      "email": "karlapavezp@gmail.com",
+      "notas": "Esta es la Charlotte",
+      "id": 8
     }
   ]
 }
