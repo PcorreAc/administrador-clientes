@@ -12,7 +12,7 @@ const EditarCliente = () => {
     setCargando(!cargando);
     const obtenerClienteAPI = async () => {
       try {
-        const url = `http://localhost:4000/clientes/${id}`;
+        const url = `${import.meta.env.VITE_API_URL}/${id}`;
         const respuesta = await fetch(url);
         const resultado = await respuesta.json();
         setCliente(resultado);
@@ -29,12 +29,12 @@ const EditarCliente = () => {
   return (
     <>
       <h1 className="font-black text-4xl text-blue-900">Editar Cliente</h1>
-      <p className="mt-3">Utiliza este ormulario para editar al Cliente</p>
+      <p className="mt-3">Utiliza este formulario para editar al Cliente.</p>
       {cliente?.nombre ? (
         <Formulario cliente={cliente} cargando={cargando} />
       ) : (
         <p>
-          ID Cliente <span className="font-bold text-lg">NO válido</span>{" "}
+          -- ID Cliente <span className="font-bold text-lg">NO válido</span> --
         </p>
       )}
     </>
